@@ -22,3 +22,8 @@ now be trained over a variance of different parts. As the experemental results o
 the previous solution revealed that using 4 frame windows achieved the best result
 for other examples. For this reason i'm going to train over 4 frames in the new 
 application of the problem.
+
+### The inclusion of a new external bit of code: voice activity detection
+Rather than removing silence based on low signal strength and voice activity 
+detection I want to find examples of speech that is voiced rather than other
+slightly less descriptive utterances. The new library will ensure that.
