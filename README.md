@@ -13,3 +13,12 @@ the playback of of the audio file.
 There will also be a graph showing the activiation of the classifier over 
 the intervals defined in the program along with an overall classification value 
 of the result. 
+
+### Change to the classification algorithm
+Rather than training the classifier over whole files as individual data points
+the nature of the problem has changed with the use of the classifier to determine
+the classification of parts of the recording. Because of this the classifier should
+now be trained over a variance of different parts. As the experemental results of
+the previous solution revealed that using 4 frame windows achieved the best result
+for other examples. For this reason i'm going to train over 4 frames in the new 
+application of the problem.
