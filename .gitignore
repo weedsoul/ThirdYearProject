@@ -16,6 +16,7 @@ local.properties
 .settings/
 .loadpath
 *.mexw64
+*.mexmaci64
 wavs
 
 # External tool builders

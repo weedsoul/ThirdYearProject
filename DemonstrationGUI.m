@@ -88,11 +88,10 @@ plot(handles.axesWave, wav{1});
 result = demoClassify(wav, fs)
 result2 = imresize(result, [1, length(wav{1})], 'nearest');
 
+plot(handles.axesClass, result);
 % Update handles structure
 guidata(hObject, handles);
-reds = find(result2 == 1);
-hold on, plot(result2,'r.')
-hold off
+
 
 
 % --- Executes on button press in togglebutton1.
