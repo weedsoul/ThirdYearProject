@@ -84,11 +84,16 @@ filepath = strcat(directoryname, filename);
 [wav{1}, fs] = readwav(filepath);
 wav{1} = RemoveSilence(wav{1},fs);
 handles.player = audioplayer(wav{1}, fs);
-plot(handles.axesWave, wav{1});
+plot(handles.axesWave, wav{1})
+ylim([min(wav{1}), max(wav{1})]);
 result = demoClassify(wav, fs)
-result2 = imresize(result, [1, length(wav{1})], 'nearest');
+N = int64(size(wav{1},1) / size(result, 1));
+result2 = kron(result(:,1), repmat(1,N,1));
+size(result2)
+size(wav{1}, 1)
 
-plot(handles.axesClass, result);
+bar(handles.axesClass, result2)
+ylim([-1.5, 1.5]);
 % Update handles structure
 guidata(hObject, handles);
 
