@@ -1,4 +1,4 @@
-function [accuracy, FEE] = CrossValidate(data, label, c,g)
+function [accuracy, FEE] = crossValidate(data, label, c,g)
     addpath libsvm/matlab
 
     %split data into 5 different subsets
