@@ -1,4 +1,4 @@
-function [segments, fs] = detectVoiced(wavFileName,t)
+function [segments, fs] = detectVoiced(x, fs,t)
 
 % 
 % function [segments, fs] = detectVoiced(wavFileName)
@@ -29,22 +29,6 @@ function [segments, fs] = detectVoiced(wavFileName,t)
 
 
 
-% Check if the given wav file exists:
-fp = fopen(wavFileName, 'rb');
-if (fp<0)
-	fprintf('The file %s has not been found!\n', wavFileName);
-	return;
-end 
-fclose(fp);
-
-% Check if .wav extension exists:
-if  (strcmpi(wavFileName(end-3:end),'.wav'))
-    % read the wav file name:
-    [x,fs] = wavread(wavFileName);
-else
-    fprintf('Unknown file type!\n');
-    return;
-end
 
 
 % Convert mono to stereo
