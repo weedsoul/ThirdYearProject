@@ -1,4 +1,8 @@
 # Project Demonstration
+
+### Note: This is incomplete
+I've been unable to find the complete solution, this is a snapshop of the code from about half way through the project
+
 In the project demonstration we have a graphical user interface which will 
 show the wave compared to the activation of the classifier to determine the
 period of the speech which the classifier has determined to be children's speech
